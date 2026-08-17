@@ -117,7 +117,7 @@ button{font-family:inherit;cursor:pointer}
 
 /* ---------- BG ---------- */
 .orbs{position:fixed;inset:0;z-index:-1;overflow:hidden}
-.orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:.3;animation:float 16s ease-in-out infinite}
+.orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:.3;animation:float 16s ease-in-out infinite;will-change:transform}
 .orb.a{width:560px;height:560px;background:#0f9d58;top:-180px;right:-140px}
 .orb.b{width:440px;height:440px;background:#0b5c38;bottom:-160px;left:-140px;animation-delay:-6s}
 @keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-40px,40px) scale(1.1)}}
@@ -159,7 +159,7 @@ nav.scrolled{background:rgba(5,11,18,.78);backdrop-filter:blur(16px);-webkit-bac
 /* hero vertical carousels (like old pryvo.de) */
 .hero-carousel{display:flex;gap:22px;justify-content:center;height:min(78vh,700px);overflow:hidden;mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent)}
 .vcol{display:flex;flex-direction:column;gap:22px;width:min(240px,32vw)}
-.vcol .stack{display:flex;flex-direction:column;gap:22px;animation:vscroll 26s linear infinite}
+.vcol .stack{display:flex;flex-direction:column;gap:22px;animation:vscroll 26s linear infinite;will-change:transform}
 .vcol.rev .stack{animation-direction:reverse}
 .vcol:hover .stack{animation-play-state:paused}
 @keyframes vscroll{to{transform:translateY(calc(-50% - 11px))}}
@@ -175,7 +175,7 @@ nav.scrolled{background:rgba(5,11,18,.78);backdrop-filter:blur(16px);-webkit-bac
 
 /* ---------- Horizontal ticker of screens ---------- */
 .ticker{overflow:hidden;padding:40px 0;mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
-.ticker-track{display:flex;gap:26px;width:max-content;animation:hscroll 38s linear infinite}
+.ticker-track{display:flex;gap:26px;width:max-content;animation:hscroll 38s linear infinite;will-change:transform}
 .ticker:hover .ticker-track{animation-play-state:paused}
 @keyframes hscroll{to{transform:translateX(calc(-50% - 13px))}}
 .ticker .shot{width:210px;flex-shrink:0;transition:transform .4s}
@@ -207,14 +207,13 @@ section{padding:110px clamp(16px,5vw,72px);max-width:1340px;margin:0 auto}
 .ftxt li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:.95rem}
 .ftxt li svg{width:18px;height:18px;stroke:var(--green2);flex-shrink:0;margin-top:3px}
 
-/* ---------- Placeholder ---------- */
-.ph{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:2px dashed rgba(110,231,183,.35);border-radius:28px;background:repeating-linear-gradient(45deg,rgba(110,231,183,.04) 0 14px,transparent 14px 28px);color:var(--muted);text-align:center;padding:20px}
-.ph svg{width:34px;height:34px;stroke:var(--green2);opacity:.8}
-.ph span{font-size:.85rem;max-width:230px}
-.ph.ratio43{aspect-ratio:4/3}
-.ph.avatar{width:64px;height:64px;border-radius:50%;padding:0;aspect-ratio:1}
-.ph.avatar svg{width:24px;height:24px}
-.ph.avatar span{display:none}
+/* ---------- Icon panel (branded visual, used until real community media is ready) ---------- */
+.iconpanel{position:relative;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 28% 24%,rgba(110,231,183,.22),transparent 55%),linear-gradient(135deg,#0d2a1e,#081713 55%,#050b12)}
+.iconpanel::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(110,231,183,.16) 1.5px,transparent 1.5px);background-size:24px 24px;opacity:.55}
+.iconpanel svg{position:relative;width:56px;height:56px;stroke:var(--green2);opacity:.9}
+.iconpanel.ratio43{aspect-ratio:4/3}
+
+.avatar-letter{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--grad);color:#052012;font-family:var(--font-d);font-weight:700;font-size:1.5rem;flex-shrink:0}
 
 /* ---------- Tabs (Everything you need...combined!) ---------- */
 .tabs-bar{display:flex;gap:10px;justify-content:center;margin-bottom:44px;flex-wrap:wrap}
@@ -256,6 +255,7 @@ section{padding:110px clamp(16px,5vw,72px);max-width:1340px;margin:0 auto}
 .sport .label p{font-size:.85rem;color:var(--muted);opacity:0;transition:opacity .45s}
 .sport:hover .label p{opacity:1}
 .sport .soon{position:absolute;top:18px;right:18px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--grad);color:#052012;font-weight:600;padding:6px 13px;border-radius:99px;animation:blink 2.2s infinite}
+.sport .ai-badge{position:absolute;top:18px;left:18px;z-index:1;font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:rgba(5,11,18,.75);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.22);color:#fff;padding:5px 11px;border-radius:99px}
 .sport.coming img{filter:saturate(.4) brightness(.75)}
 .sport.coming:hover img{filter:saturate(.8) brightness(.9)}
 
@@ -293,6 +293,7 @@ footer{border-top:1px solid var(--border);padding:60px clamp(16px,5vw,72px) 40px
 .socials svg{width:18px;height:18px;fill:var(--muted)}
 .socials a:hover svg{fill:var(--green2)}
 .foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#5d6f65;font-size:.82rem;border-top:1px solid var(--border);padding-top:26px}
+.ai-note{color:#5d6f65;font-size:.8rem;text-align:center;max-width:640px;margin:0 auto 30px;line-height:1.6}
 
 /* ---------- Responsive ---------- */
 @media (max-width:1020px){
@@ -421,7 +422,7 @@ footer{border-top:1px solid var(--border);padding:60px clamp(16px,5vw,72px) 40px
 
   <div class="frow flip reveal">
     <div class="fmedia">
-      <video autoplay muted loop playsinline poster="assets/img/mockup-2-poster.webp" src="assets/video/mockup-2.mp4" style="aspect-ratio:auto"></video>
+      <video id="feat-video" muted loop playsinline preload="metadata" poster="assets/img/mockup-2-poster.webp" src="assets/video/mockup-2.mp4" style="aspect-ratio:auto"></video>
     </div>
     <div class="ftxt">
       <div class="fnum">02 — Tracking</div>
@@ -436,9 +437,8 @@ footer{border-top:1px solid var(--border);padding:60px clamp(16px,5vw,72px) 40px
   </div>
 
   <div class="frow reveal">
-    <div class="fmedia ph ratio43">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-      <span data-de="Platzhalter — hier kommt euer Community-Asset (Bild/Video)" data-en="Placeholder — your community asset goes here (image/video)">Platzhalter — hier kommt euer Community-Asset (Bild/Video)</span>
+    <div class="fmedia iconpanel ratio43">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
     </div>
     <div class="ftxt">
       <div class="fnum">03 — Community</div>
@@ -458,7 +458,7 @@ footer{border-top:1px solid var(--border);padding:60px clamp(16px,5vw,72px) 40px
     <div class="stars">★★★★★</div>
     <blockquote data-de='"Ich wünschte, ich hätte Pryvo früher gehabt! Mein Progress ist explodiert, seit ich mit meinem <span class="grad-text">persönlichen Coach</span> trainiere."' data-en='"I wish I had Pryvo earlier! My progress exploded since I started training with my <span class="grad-text">personal coach</span>."'>"Ich wünschte, ich hätte Pryvo früher gehabt! Mein Progress ist explodiert, seit ich mit meinem <span class="grad-text">persönlichen Coach</span> trainiere."</blockquote>
     <div class="who">
-      <div class="ph avatar"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></div>
+      <div class="avatar-letter">M</div>
       <span data-de="— Mario, Beta-Tester &amp; Fußballer" data-en="— Mario, beta tester &amp; footballer">— Mario, Beta-Tester &amp; Fußballer</span>
     </div>
   </div>
@@ -490,9 +490,8 @@ footer{border-top:1px solid var(--border);padding:60px clamp(16px,5vw,72px) 40px
     </div>
   </div>
   <div class="tab-panel" id="tab-community">
-    <div class="fmedia ph ratio43" style="aspect-ratio:16/10">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-      <span data-de="Platzhalter — Community-Screenshot folgt" data-en="Placeholder — community screenshot coming">Platzhalter — Community-Screenshot folgt</span>
+    <div class="fmedia iconpanel" style="aspect-ratio:16/10">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
     </div>
     <div>
       <h3 data-de="Gemeinsam statt allein" data-en="Together instead of alone">Gemeinsam statt allein</h3>
@@ -530,10 +529,10 @@ footer{border-top:1px solid var(--border);padding:60px clamp(16px,5vw,72px) 40px
     <h2 class="reveal d1" data-de='Dein Sport. <span class="grad-text">Dein Plan.</span>' data-en='Your sport. <span class="grad-text">Your plan.</span>'>Dein Sport. <span class="grad-text">Dein Plan.</span></h2>
   </div>
   <div class="sports">
-    <div class="sport reveal"><img src="assets/img/gymcover.webp" alt="Gym Training" loading="lazy"><div class="shade"></div><div class="label"><h3>Gym</h3><p data-de="Krafttraining mit adaptiven Plänen &amp; Übungsvideos" data-en="Strength training with adaptive plans &amp; exercise videos">Krafttraining mit adaptiven Plänen &amp; Übungsvideos</p></div></div>
-    <div class="sport reveal d1"><img src="assets/img/calisthenciscover.webp" alt="Calisthenics" loading="lazy"><div class="shade"></div><div class="label"><h3>Calisthenics</h3><p data-de="Skills &amp; Progressionen — vom ersten Push-up bis zur Planche" data-en="Skills &amp; progressions — from your first push-up to the planche">Skills &amp; Progressionen — vom ersten Push-up bis zur Planche</p></div></div>
-    <div class="sport reveal d2"><img src="assets/img/runningcover.webp" alt="Running" loading="lazy"><div class="shade"></div><div class="label"><h3>Running</h3><p data-de="GPS-Tracking mit Live-Karte, Pace &amp; Kalorien" data-en="GPS tracking with live map, pace &amp; calories">GPS-Tracking mit Live-Karte, Pace &amp; Kalorien</p></div></div>
-    <div class="sport coming reveal d3"><img src="assets/img/hyroxcover.webp" alt="Hyrox" loading="lazy"><div class="shade"></div><div class="soon" data-de="Coming Soon" data-en="Coming Soon">Coming Soon</div><div class="label"><h3>Hyrox</h3><p data-de="Race-Vorbereitung für die am schnellsten wachsende Fitness-Competition" data-en="Race prep for the fastest-growing fitness competition">Race-Vorbereitung für die am schnellsten wachsende Fitness-Competition</p></div></div>
+    <div class="sport reveal"><img src="assets/img/gymcover.webp" alt="Gym Training" loading="lazy"><div class="shade"></div><div class="ai-badge" data-de="KI-generiert" data-en="AI-generated">KI-generiert</div><div class="label"><h3>Gym</h3><p data-de="Krafttraining mit adaptiven Plänen &amp; Übungsvideos" data-en="Strength training with adaptive plans &amp; exercise videos">Krafttraining mit adaptiven Plänen &amp; Übungsvideos</p></div></div>
+    <div class="sport reveal d1"><img src="assets/img/calisthenciscover.webp" alt="Calisthenics" loading="lazy"><div class="shade"></div><div class="ai-badge" data-de="KI-generiert" data-en="AI-generated">KI-generiert</div><div class="label"><h3>Calisthenics</h3><p data-de="Skills &amp; Progressionen — vom ersten Push-up bis zur Planche" data-en="Skills &amp; progressions — from your first push-up to the planche">Skills &amp; Progressionen — vom ersten Push-up bis zur Planche</p></div></div>
+    <div class="sport reveal d2"><img src="assets/img/runningcover.webp" alt="Running" loading="lazy"><div class="shade"></div><div class="ai-badge" data-de="KI-generiert" data-en="AI-generated">KI-generiert</div><div class="label"><h3>Running</h3><p data-de="GPS-Tracking mit Live-Karte, Pace &amp; Kalorien" data-en="GPS tracking with live map, pace &amp; calories">GPS-Tracking mit Live-Karte, Pace &amp; Kalorien</p></div></div>
+    <div class="sport coming reveal d3"><img src="assets/img/hyroxcover.webp" alt="Hyrox" loading="lazy"><div class="shade"></div><div class="ai-badge" data-de="KI-generiert" data-en="AI-generated">KI-generiert</div><div class="soon" data-de="Coming Soon" data-en="Coming Soon">Coming Soon</div><div class="label"><h3>Hyrox</h3><p data-de="Race-Vorbereitung für die am schnellsten wachsende Fitness-Competition" data-en="Race prep for the fastest-growing fitness competition">Race-Vorbereitung für die am schnellsten wachsende Fitness-Competition</p></div></div>
   </div>
 </section>
 
@@ -592,6 +591,7 @@ footer{border-top:1px solid var(--border);padding:60px clamp(16px,5vw,72px) 40px
       </div>
     </div>
   </div>
+  <p class="ai-note" data-de="Hinweis: Die Trainingsbilder (Gym, Calisthenics, Running, Hyrox) sind KI-generiert, die Screenshots zeigen die echte Pryvo-App. Diese Website wurde mit Unterstützung von KI (Claude) erstellt." data-en="Note: The training cover images (gym, calisthenics, running, hyrox) are AI-generated; screenshots show the real Pryvo app. This website was built with the help of AI (Claude).">Hinweis: Die Trainingsbilder (Gym, Calisthenics, Running, Hyrox) sind KI-generiert, die Screenshots zeigen die echte Pryvo-App. Diese Website wurde mit Unterstützung von KI (Claude) erstellt.</p>
   <div class="foot-bottom">
     <span>© 2026 PRYVO. <span data-de="Alle Rechte vorbehalten." data-en="All rights reserved.">Alle Rechte vorbehalten.</span></span>
     <span data-de="Made with 💚 in Germany" data-en="Made with 💚 in Germany">Made with 💚 in Germany</span>
@@ -608,7 +608,18 @@ addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30),{passi
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-const tk=document.getElementById('ticker');tk.innerHTML+=tk.innerHTML;
+/* clone instead of innerHTML+= so already-decoded images aren't destroyed and re-fetched */
+const tk=document.getElementById('ticker');
+const tkFrag=document.createDocumentFragment();
+tk.querySelectorAll('.shot').forEach(el=>tkFrag.appendChild(el.cloneNode(true)));
+tk.appendChild(tkFrag);
+
+/* only decode/play the feature video while it's actually on screen */
+const fv=document.getElementById('feat-video');
+if(fv){
+  const vio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){fv.play().catch(()=>{})}else{fv.pause()}}),{threshold:.25});
+  vio.observe(fv);
+}
 
 function setTab(btn,id){
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
