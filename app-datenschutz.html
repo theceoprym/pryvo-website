@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung (App) – PRYVO</title>
+<meta name="description" content="Datenschutzerklärung der PRYVO-App für iOS und Android gemäß DSGVO.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://pryvo.de/app-datenschutz.html">
+<link rel="icon" type="image/webp" href="assets/img/logo.webp">
+<style>
+@font-face{font-family:'Space Grotesk';src:url('assets/fonts/space-grotesk-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Space Grotesk';src:url('assets/fonts/space-grotesk-latin-700-normal.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Inter';src:url('assets/fonts/inter-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Inter';src:url('assets/fonts/inter-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Inter';src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2');font-weight:600;font-display:swap}
+:root{
+  --bg:#050b12;--panel:rgba(255,255,255,.04);--panel2:rgba(255,255,255,.07);--border:rgba(255,255,255,.1);
+  --text:#eef4f0;--muted:#9db0a6;--green:#0f9d58;--green2:#6ee7b7;--grad:linear-gradient(120deg,#0f9d58,#6ee7b7);
+  --font-d:'Space Grotesk',system-ui,sans-serif;--font-b:'Inter',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font-b);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-d);line-height:1.2;letter-spacing:-.01em}
+a{color:var(--green2);text-decoration:none}
+a:hover{text-decoration:underline}
+.orbs{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:.22;background:#0f9d58;width:480px;height:480px;top:-160px;right:-140px}
+body>nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px clamp(16px,4vw,48px);background:rgba(5,11,18,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--font-d);font-weight:700;font-size:20px;letter-spacing:.14em;color:var(--text)}
+.nav-logo img{width:34px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#052012;font-weight:600;font-size:14px;padding:10px 22px;border-radius:99px;text-decoration:none}
+main{max-width:760px;margin:0 auto;padding:70px clamp(16px,5vw,24px) 100px}
+.eyebrow{display:inline-flex;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--green2);border:1px solid rgba(110,231,183,.3);background:rgba(15,157,88,.1);padding:7px 16px;border-radius:99px;margin-bottom:22px}
+h1{font-size:clamp(2rem,5vw,2.8rem);margin-bottom:6px}
+.stand{color:var(--muted);font-size:.9rem;margin-bottom:28px}
+.lead{color:var(--muted);font-size:1.05rem;margin-bottom:8px}
+h2{font-size:1.2rem;margin:38px 0 12px}
+p{color:var(--muted);margin-bottom:10px}
+ul{padding-left:20px;margin-bottom:10px;color:var(--muted)}
+li{margin-bottom:7px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:26px 28px;margin:16px 0}
+.toc{background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:24px 28px;margin-bottom:20px}
+.toc h2{margin-top:0;font-size:1.05rem}
+.toc ol{padding-left:20px;color:var(--muted);font-size:.95rem;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+hr{border:none;border-top:1px solid var(--border);margin:36px 0}
+footer{border-top:1px solid var(--border);padding:40px clamp(16px,5vw,48px);text-align:center;color:#5d6f65;font-size:.85rem}
+footer a{color:var(--muted)}
+.foot-note{color:#5d6f65;font-size:.85rem;margin-top:30px}
+@media (max-width:560px){.toc ol{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="orbs" aria-hidden="true"><div class="orb"></div></div>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="assets/img/logo.webp" alt="Pryvo Logo">PRYVO</a>
+  <a class="btn" href="index.html">Zur Website</a>
+</nav>
+
+<main>
+  <div class="eyebrow">Rechtliches — App</div>
+  <h1>Datenschutzerklärung</h1>
+  <p class="stand">PRYVO-App · Stand: August 2026</p>
+
+  <p class="lead">Diese Erklärung beschreibt, wie die PRYVO-App (iOS und Android) mit deinen personenbezogenen Daten umgeht. Für die Website pryvo.de gilt die separate <a href="datenschutz.html">Website-Datenschutzerklärung</a>.</p>
+
+  <nav class="toc" aria-label="Inhaltsverzeichnis">
+    <h2>Inhalt</h2>
+    <ol>
+      <li>Verantwortlicher</li>
+      <li>Überblick</li>
+      <li>Welche Daten wir verarbeiten</li>
+      <li>Zwecke &amp; Rechtsgrundlagen</li>
+      <li>Gesundheitsdaten</li>
+      <li>Standortdaten (Lauf-Tracking)</li>
+      <li>Kamera &amp; Mikrofon</li>
+      <li>KI-Funktionen</li>
+      <li>Abonnements &amp; Käufe</li>
+      <li>Empfänger / Auftragsverarbeiter</li>
+      <li>Community-Funktionen</li>
+      <li>Speicherort &amp; Drittlandübermittlung</li>
+      <li>Speicherdauer &amp; Löschung</li>
+      <li>Deine Rechte</li>
+      <li>Beschwerderecht</li>
+      <li>Datensicherheit</li>
+      <li>Kinder</li>
+      <li>Änderungen dieser Erklärung</li>
+    </ol>
+  </nav>
+
+  <h2 id="verantwortlicher">1. Verantwortlicher</h2>
+  <p>Verantwortlich für die Datenverarbeitung in der PRYVO-App im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+  <div class="card">
+    <p style="margin-bottom:2px">Fehim Iljazi</p>
+    <p style="margin-bottom:2px">Henkenstraße 1, 33106 Paderborn</p>
+    <p style="margin-bottom:0">E-Mail: <a href="mailto:prymmedia@outlook.de">prymmedia@outlook.de</a></p>
+  </div>
+
+  <h2 id="ueberblick">2. Überblick</h2>
+  <p>PRYVO ist eine Ernährungs- und Fitness-App. Wir verarbeiten personenbezogene Daten nur, soweit das für die Funktionen der App erforderlich ist oder du eingewilligt hast.</p>
+  <p>Wir verkaufen deine Daten nicht, zeigen keine Werbung und binden keine Werbe- oder Tracking-Netzwerke Dritter ein.</p>
+
+  <h2 id="daten">3. Welche Daten wir verarbeiten</h2>
+  <p>Je nachdem, welche Funktionen du nutzt, verarbeiten wir folgende Kategorien:</p>
+  <ul>
+    <li><strong style="color:var(--text)">Kontodaten:</strong> E-Mail-Adresse, ein verschlüsselt gespeichertes Passwort und eine eindeutige Nutzer-ID.</li>
+    <li><strong style="color:var(--text)">Profil- &amp; Zieldaten:</strong> z. B. Anzeigename, Geschlecht, Alter, Größe, Gewicht, Aktivitätslevel, Ernährungsweise und -vorlieben sowie persönliche Ziele.</li>
+    <li><strong style="color:var(--text)">Ernährungs-Tracking:</strong> erfasste Lebensmittel und Mahlzeiten, Kalorien und Nährwerte, Barcode-Scans sowie per Sprache oder Foto erfasste Mahlzeiten.</li>
+    <li><strong style="color:var(--text)">Trainingsdaten:</strong> Workouts, Sätze/Wiederholungen, Gewichte sowie Läufe inklusive GPS-Streckenverlauf.</li>
+    <li><strong style="color:var(--text)">Gesundheitsdaten (optional):</strong> Schritte, Herzfrequenz, Ruhepuls, verbrannte Kalorien, Trainingseinheiten und Distanz aus Apple Health (iOS) bzw. Health Connect (Android).</li>
+    <li><strong style="color:var(--text)">Fotos &amp; Bilder:</strong> Profilbild und von dir hochgeladene Bilder (z. B. für die KI-Form-Analyse).</li>
+    <li><strong style="color:var(--text)">Community-Inhalte (optional):</strong> Beiträge, Kommentare, Likes, Events und geteilte Rezepte.</li>
+    <li><strong style="color:var(--text)">Kauf-/Abo-Daten:</strong> Status deines Premium-Abos und eine pseudonyme Nutzer-ID (siehe Abschnitt 9).</li>
+    <li><strong style="color:var(--text)">Technische Daten &amp; Diagnose:</strong> Absturz- und Fehlerberichte zur Stabilität der App (ohne personenbezogene Klartext-Daten).</li>
+  </ul>
+
+  <h2 id="zwecke">4. Zwecke &amp; Rechtsgrundlagen</h2>
+  <p>Zur Bereitstellung der App-Funktionen (Konto, Tracking, Trainingspläne, Rezepte) verarbeiten wir Daten auf Grundlage der Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
+  <p>Optionale Funktionen — Gesundheitsdaten, Standort, Benachrichtigungen, Kamera/Mikrofon — verarbeiten wir nur mit deiner Einwilligung (Art. 6 Abs. 1 lit. a, bei Gesundheitsdaten zusätzlich Art. 9 Abs. 2 lit. a DSGVO). Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+  <p>Zur Sicherheit, zur Missbrauchsvermeidung und zur Fehlerdiagnose verarbeiten wir Daten auf Grundlage unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO).</p>
+
+  <h2 id="gesundheit">5. Gesundheitsdaten (Apple Health / Health Connect)</h2>
+  <p>Wenn du die Verbindung aktivierst, liest PRYVO ausgewählte Gesundheits- und Aktivitätsdaten (z. B. Schritte, Herzfrequenz, Kalorien) aus Apple Health (iOS) oder Health Connect (Android) — ausschließlich nach deiner ausdrücklichen Freigabe der jeweiligen Datenkategorien.</p>
+  <p>Diese Daten dienen nur der Anzeige und Auswertung in der App. Du kannst den Zugriff jederzeit in den Systemeinstellungen deines Geräts widerrufen.</p>
+
+  <h2 id="standort">6. Standortdaten (Lauf-Tracking)</h2>
+  <p>Für das GPS-Lauf-Tracking verarbeiten wir deinen Standort — auf Wunsch auch im Hintergrund, damit ein Lauf bei ausgeschaltetem Display weiter aufgezeichnet wird. Die Standorterfassung läuft nur während eines aktiven Laufs.</p>
+  <p>Der aufgezeichnete Streckenverlauf wird deinem Konto zugeordnet gespeichert, damit du deine Läufe später ansehen kannst.</p>
+
+  <h2 id="kamera">7. Kamera &amp; Mikrofon</h2>
+  <p>Die Kamera nutzen wir für den Barcode-Scan beim Tracking und zum Aufnehmen von Fotos (z. B. Profilbild). Das Mikrofon nutzen wir, damit du Mahlzeiten per Sprache erfassen kannst. Zugriffe erfolgen nur nach deiner Freigabe und ausschließlich für die jeweilige Funktion.</p>
+
+  <h2 id="ki">8. KI-Funktionen</h2>
+  <p>Für Funktionen wie KI-Coach, Rezeptgenerierung, Nährwert-Erkennung und Form-Analyse werden deine Eingaben (Text, ggf. Bilder) an Google Cloud Vertex AI übermittelt und dort ausschließlich zur Beantwortung deiner Anfrage verarbeitet.</p>
+  <p>Nach den Vertragsbedingungen von Google werden diese Inhalte nicht zum Training der KI-Modelle von Google verwendet.</p>
+
+  <h2 id="abos">9. Abonnements &amp; Käufe</h2>
+  <p>Premium-Abonnements werden über den <strong style="color:var(--text)">App Store (Apple)</strong> bzw. <strong style="color:var(--text)">Google Play (Google)</strong> abgewickelt. Die Zahlungsabwicklung erfolgt ausschließlich durch den jeweiligen Store; wir erhalten <strong style="color:var(--text)">keine Zahlungsdaten</strong> (z. B. Kartennummern).</p>
+  <p>Zur Verwaltung der Kauf-Berechtigungen setzen wir <strong style="color:var(--text)">RevenueCat, Inc. (USA)</strong> als Auftragsverarbeiter ein. An RevenueCat werden der Kauf-/Abo-Status sowie eine pseudonyme Nutzer-Kennung übermittelt, damit dein Premium-Zugang geräteübergreifend funktioniert.</p>
+
+  <h2 id="empfaenger">10. Empfänger / Auftragsverarbeiter</h2>
+  <p>Wir setzen sorgfältig ausgewählte Dienstleister ein, die Daten in unserem Auftrag verarbeiten:</p>
+  <ul>
+    <li><strong style="color:var(--text)">Google Firebase</strong> (Google Ireland Ltd. / Google LLC): Authentifizierung, Datenbank (Firestore), Datei-Speicher und Server-Funktionen; Speicherung in der EU-Region.</li>
+    <li><strong style="color:var(--text)">Google Cloud Vertex AI:</strong> KI-Funktionen (siehe Abschnitt 8).</li>
+    <li><strong style="color:var(--text)">RevenueCat, Inc.:</strong> Verwaltung der Abo-Berechtigungen (siehe Abschnitt 9).</li>
+    <li><strong style="color:var(--text)">Sentry</strong> (Functional Software, Inc.): technische Absturz- und Fehlerdiagnose; Übertragung an die EU-Region, ohne personenbezogene Klartext-Daten.</li>
+    <li><strong style="color:var(--text)">Replicate:</strong> serverseitige Generierung von Rezeptbildern (ohne Bezug zu deinen personenbezogenen Daten).</li>
+    <li><strong style="color:var(--text)">Open Food Facts</strong> und <strong style="color:var(--text)">USDA FoodData Central</strong>: Abfrage von Lebensmittel-Datenbanken; übermittelt werden nur Suchbegriffe bzw. Barcodes, keine Kontodaten.</li>
+    <li><strong style="color:var(--text)">Apple</strong> (App Store, Apple Health) bzw. <strong style="color:var(--text)">Google</strong> (Google Play, Health Connect): Store- und Gesundheitsdaten nach Maßgabe der jeweiligen Plattform; Gesundheitsdaten bleiben auf deinem Gerät und werden nur mit deiner Freigabe gelesen.</li>
+  </ul>
+
+  <h2 id="community">11. Community-Funktionen</h2>
+  <p>Wenn du Beiträge, Kommentare, Events oder Rezepte in der Community teilst, sind diese Inhalte samt Anzeigename und ggf. Profilbild für andere Nutzer sichtbar. Teile dort nur, was du veröffentlichen möchtest.</p>
+
+  <h2 id="drittland">12. Speicherort &amp; Drittlandübermittlung</h2>
+  <p>Deine Daten werden vorrangig in Rechenzentren innerhalb der EU verarbeitet. Einzelne Dienstleister (z. B. Google LLC, RevenueCat, Sentry, Replicate) können Daten auch in den USA verarbeiten. In diesen Fällen stützen wir die Übermittlung auf die Standardvertragsklauseln der EU-Kommission bzw. einen gültigen Angemessenheitsbeschluss.</p>
+
+  <h2 id="speicherdauer">13. Speicherdauer &amp; Löschung</h2>
+  <p>Wir speichern deine Daten, solange dein Konto besteht. Du kannst dein Konto jederzeit in den Einstellungen löschen: Nach einer Karenzzeit von 30 Tagen — in der du die Löschung noch rückgängig machen kannst — werden alle zugehörigen Daten endgültig und unwiderruflich gelöscht.</p>
+
+  <h2 id="rechte">14. Deine Rechte</h2>
+  <p>Dir stehen nach der DSGVO insbesondere folgende Rechte zu:</p>
+  <ul>
+    <li>Auskunft über die zu dir gespeicherten Daten (Art. 15).</li>
+    <li>Berichtigung unrichtiger Daten (Art. 16).</li>
+    <li>Löschung (Art. 17) und Einschränkung der Verarbeitung (Art. 18).</li>
+    <li>Datenübertragbarkeit (Art. 20).</li>
+    <li>Widerspruch gegen bestimmte Verarbeitungen (Art. 21).</li>
+    <li>Widerruf erteilter Einwilligungen mit Wirkung für die Zukunft.</li>
+  </ul>
+
+  <h2 id="beschwerde">15. Beschwerderecht</h2>
+  <p>Zur Ausübung deiner Rechte genügt eine E-Mail an uns. Unabhängig davon hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p>
+
+  <h2 id="sicherheit">16. Datensicherheit</h2>
+  <p>Wir schützen deine Daten durch Verschlüsselung bei der Übertragung, serverseitige Zugriffsregeln sowie Schutzmechanismen gegen Missbrauch (unter anderem App Check und reCAPTCHA).</p>
+
+  <h2 id="kinder">17. Kinder</h2>
+  <p>PRYVO richtet sich nicht an Kinder unter 16 Jahren. Wir erheben nicht wissentlich Daten von Personen unter diesem Alter.</p>
+
+  <h2 id="aenderung">18. Änderungen dieser Erklärung</h2>
+  <p>Wir passen diese Datenschutzerklärung an, wenn sich Funktionen oder rechtliche Anforderungen ändern. Die jeweils aktuelle Fassung findest du in der App und auf pryvo.de.</p>
+
+  <hr>
+  <p class="foot-note">PRYVO ist ein Angebot von Fehim Iljazi, Henkenstraße 1, 33106 Paderborn. Diese Datenschutzerklärung gilt für die PRYVO-App auf iOS und Android.</p>
+</main>
+
+<footer>
+  <p>© 2026 PRYVO · <a href="index.html">Startseite</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz (Website)</a> · <a href="agb.html">AGB (App)</a></p>
+</footer>
+</body>
+</html>
