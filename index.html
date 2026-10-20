@@ -3,8 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PRYVO – Dein KI-Coach für Training, Ernährung & Progress</title>
-<meta name="description" content="Pryvo ist die All-in-One Fitness App: KI-Trainingspläne, Meal Vision Food-Tracking, GPS-Running und Gamification. Jetzt für die Warteliste anmelden.">
+<title>PRYVO – KI Fitness App: Trainingsplan, Kalorien zählen &amp; Ernährung | Warteliste</title>
+<meta name="description" content="PRYVO ist die KI Fitness- &amp; Ernährungs-App: personalisierter Trainingsplan für Gym, Calisthenics &amp; Running, Kalorien zählen per Foto, Makros tracken, GPS-Laufen und Community. Jetzt auf die Warteliste.">
+<meta name="keywords" content="Fitness App, KI Fitness App, Trainingsplan App, Ernährungs App, Kalorien zählen, Kalorienzähler, Makros tracken, Abnehmen, Muskelaufbau, Gym Trainingsplan, Calisthenics, Laufen Tracker, GPS Running, Hyrox, Workout App, Ernährungsplan, Lifestyle, Gesundheit, Pryvo">
+<meta name="author" content="MaFeKa UG (haftungsbeschränkt)">
+<meta name="theme-color" content="#050b12">
+<link rel="alternate" hreflang="de" href="https://pryvo.de/">
+<link rel="alternate" hreflang="x-default" href="https://pryvo.de/">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/space-grotesk-latin-700-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-latin-400-normal.woff2" crossorigin>
 <link rel="canonical" href="https://pryvo.de/">
 <meta property="og:title" content="PRYVO – Dein KI-Coach für Training, Ernährung & Progress">
 <meta property="og:description" content="Track. Train. Connect. Die All-in-One Fitness App mit smarter KI.">
@@ -13,6 +20,7 @@
 <meta property="og:image" content="https://pryvo.de/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PRYVO – KI Fitness App">
 <meta property="og:locale" content="de_DE">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="PRYVO">
@@ -25,6 +33,14 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://pryvo.de/#website",
+      "url": "https://pryvo.de/",
+      "name": "PRYVO",
+      "inLanguage": "de-DE",
+      "publisher": { "@id": "https://pryvo.de/#org" }
+    },
     {
       "@type": "Organization",
       "@id": "https://pryvo.de/#org",
@@ -42,7 +58,8 @@
       "name": "Pryvo",
       "applicationCategory": "HealthApplication",
       "operatingSystem": "iOS, Android",
-      "description": "All-in-One Fitness App: KI-Trainingspläne, Food-Tracking per Foto, GPS-Running, Health-Sync und Gamification.",
+      "description": "All-in-One Fitness- und Ernährungs-App: KI-Trainingspläne, Kalorien zählen per Foto, Makros tracken, GPS-Running, Health-Sync und Gamification.",
+      "keywords": "Fitness App, Trainingsplan, Kalorien zählen, Ernährung, Abnehmen, Muskelaufbau, Calisthenics, Running",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
       "publisher": { "@id": "https://pryvo.de/#org" }
     },
@@ -58,6 +75,21 @@
           "@type": "Question",
           "name": "Was macht Pryvo besser als andere Fitness-Apps?",
           "acceptedAnswer": { "@type": "Answer", "text": "Andere Apps machen eine Sache: Tracking ODER Training ODER Community. Pryvo verbindet alles — und die KI nutzt deine Daten aus allen Bereichen, um dich wirklich individuell zu coachen." }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich mit Pryvo Kalorien zählen und Makros tracken?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja. Fotografiere deine Mahlzeit und die KI erkennt Gericht, Portion, Kalorien und Makros. Alternativ trackst du per Barcode-Scanner, Spracheingabe oder manuell." }
+        },
+        {
+          "@type": "Question",
+          "name": "Hilft Pryvo beim Abnehmen und Muskelaufbau?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Pryvo erstellt personalisierte Trainingspläne und passt Ernährung und Training an dein Ziel an – ob Abnehmen, Muskelaufbau oder Ausdauer." }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Sportarten unterstützt Pryvo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Gym/Krafttraining, Calisthenics und Running mit GPS-Tracking. Hyrox folgt in Kürze." }
         },
         {
           "@type": "Question",
@@ -199,7 +231,8 @@ section{padding:110px clamp(16px,5vw,72px);max-width:1340px;margin:0 auto}
 .fmedia{position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--border)}
 .fmedia img,.fmedia video{width:100%;aspect-ratio:4/3;object-fit:cover}
 .fmedia.tall img,.fmedia.tall video{aspect-ratio:3/4}
-.fmedia .float-shot{position:absolute;bottom:-1px;right:18px;width:36%;border-radius:18px 18px 0 0;overflow:hidden;border:1px solid rgba(110,231,183,.3);border-bottom:none;box-shadow:0 16px 44px rgba(0,0,0,.6)}
+.fmedia .float-shot{position:absolute;bottom:20px;right:20px;width:27%;border-radius:20px;overflow:hidden;border:1px solid rgba(110,231,183,.35);box-shadow:0 16px 44px rgba(0,0,0,.6)}
+.fmedia .float-shot img{aspect-ratio:auto;height:auto;object-fit:contain}
 .ftxt .fnum{font-family:var(--font-d);font-size:13px;letter-spacing:.2em;color:var(--green2);text-transform:uppercase;margin-bottom:14px}
 .ftxt h3{font-size:clamp(1.6rem,2.8vw,2.3rem);margin-bottom:16px}
 .ftxt p{color:var(--muted);font-size:1.02rem;margin-bottom:20px}
@@ -405,8 +438,8 @@ footer{border-top:1px solid var(--border);padding:60px clamp(16px,5vw,72px) 40px
 
   <div class="frow reveal">
     <div class="fmedia">
-      <img src="assets/img/gymcover.webp" alt="Individuelles Training" loading="lazy">
-      <div class="float-shot"><img src="assets/img/screen-sportarten.webp" alt="" loading="lazy" style="object-position:center 10%"></div>
+      <img src="assets/img/gymcover.webp" alt="Individuelles Training" loading="lazy" width="640" height="1138">
+      <div class="float-shot"><img src="assets/img/screen-sportarten.webp" alt="" loading="lazy" width="460" height="1000"></div>
     </div>
     <div class="ftxt">
       <div class="fnum">01 — Training</div>
@@ -476,7 +509,7 @@ footer{border-top:1px solid var(--border);padding:60px clamp(16px,5vw,72px) 40px
     <button class="tab-btn" onclick="setTab(this,'community')" data-de="Community" data-en="Community">Community</button>
   </div>
   <div class="tab-panel active" id="tab-sports">
-    <div class="fmedia" style="background:#070d0b"><img src="assets/img/calisthenciscover.webp" alt="Sport" loading="lazy" style="aspect-ratio:16/10;object-fit:contain"></div>
+    <div class="fmedia" style="max-width:320px;width:100%;margin-inline:auto"><img src="assets/img/calisthenciscover.webp" alt="Calisthenics Training mit Parallettes – KI-generiertes Bild" loading="lazy" width="640" height="1138" style="aspect-ratio:640/1138;object-fit:cover"></div>
     <div>
       <h3 data-de="Training, das sich dir anpasst" data-en="Training that adapts to you">Training, das sich dir anpasst</h3>
       <p data-de="Gym, Calisthenics oder Running: Deine Pläne wachsen mit dir mit — Übung für Übung, Woche für Woche. Mit Videos, Rest-Timer und Fortschritts-Insights." data-en="Gym, calisthenics or running: your plans grow with you — exercise by exercise, week by week. With videos, rest timer and progress insights.">Gym, Calisthenics oder Running: Deine Pläne wachsen mit dir mit — Übung für Übung, Woche für Woche. Mit Videos, Rest-Timer und Fortschritts-Insights.</p>
@@ -529,10 +562,10 @@ footer{border-top:1px solid var(--border);padding:60px clamp(16px,5vw,72px) 40px
     <h2 class="reveal d1" data-de='Dein Sport. <span class="grad-text">Dein Plan.</span>' data-en='Your sport. <span class="grad-text">Your plan.</span>'>Dein Sport. <span class="grad-text">Dein Plan.</span></h2>
   </div>
   <div class="sports">
-    <div class="sport reveal"><img src="assets/img/gymcover.webp" alt="Gym Training" loading="lazy"><div class="shade"></div><div class="ai-badge" data-de="KI-generiert" data-en="AI-generated">KI-generiert</div><div class="label"><h3>Gym</h3><p data-de="Krafttraining mit adaptiven Plänen &amp; Übungsvideos" data-en="Strength training with adaptive plans &amp; exercise videos">Krafttraining mit adaptiven Plänen &amp; Übungsvideos</p></div></div>
-    <div class="sport reveal d1"><img src="assets/img/calisthenciscover.webp" alt="Calisthenics" loading="lazy"><div class="shade"></div><div class="ai-badge" data-de="KI-generiert" data-en="AI-generated">KI-generiert</div><div class="label"><h3>Calisthenics</h3><p data-de="Skills &amp; Progressionen — vom ersten Push-up bis zur Planche" data-en="Skills &amp; progressions — from your first push-up to the planche">Skills &amp; Progressionen — vom ersten Push-up bis zur Planche</p></div></div>
-    <div class="sport reveal d2"><img src="assets/img/runningcover.webp" alt="Running" loading="lazy"><div class="shade"></div><div class="ai-badge" data-de="KI-generiert" data-en="AI-generated">KI-generiert</div><div class="label"><h3>Running</h3><p data-de="GPS-Tracking mit Live-Karte, Pace &amp; Kalorien" data-en="GPS tracking with live map, pace &amp; calories">GPS-Tracking mit Live-Karte, Pace &amp; Kalorien</p></div></div>
-    <div class="sport coming reveal d3"><img src="assets/img/hyroxcover.webp" alt="Hyrox" loading="lazy"><div class="shade"></div><div class="ai-badge" data-de="KI-generiert" data-en="AI-generated">KI-generiert</div><div class="soon" data-de="Coming Soon" data-en="Coming Soon">Coming Soon</div><div class="label"><h3>Hyrox</h3><p data-de="Race-Vorbereitung für die am schnellsten wachsende Fitness-Competition" data-en="Race prep for the fastest-growing fitness competition">Race-Vorbereitung für die am schnellsten wachsende Fitness-Competition</p></div></div>
+    <div class="sport reveal"><img src="assets/img/gymcover.webp" alt="Gym Training" loading="lazy" width="640" height="1138"><div class="shade"></div><div class="ai-badge" data-de="KI-generiert" data-en="AI-generated">KI-generiert</div><div class="label"><h3>Gym</h3><p data-de="Krafttraining mit adaptiven Plänen &amp; Übungsvideos" data-en="Strength training with adaptive plans &amp; exercise videos">Krafttraining mit adaptiven Plänen &amp; Übungsvideos</p></div></div>
+    <div class="sport reveal d1"><img src="assets/img/calisthenciscover.webp" alt="Calisthenics" loading="lazy" width="640" height="1138"><div class="shade"></div><div class="ai-badge" data-de="KI-generiert" data-en="AI-generated">KI-generiert</div><div class="label"><h3>Calisthenics</h3><p data-de="Skills &amp; Progressionen — vom ersten Push-up bis zur Planche" data-en="Skills &amp; progressions — from your first push-up to the planche">Skills &amp; Progressionen — vom ersten Push-up bis zur Planche</p></div></div>
+    <div class="sport reveal d2"><img src="assets/img/runningcover.webp" alt="Running" loading="lazy" width="640" height="1138"><div class="shade"></div><div class="ai-badge" data-de="KI-generiert" data-en="AI-generated">KI-generiert</div><div class="label"><h3>Running</h3><p data-de="GPS-Tracking mit Live-Karte, Pace &amp; Kalorien" data-en="GPS tracking with live map, pace &amp; calories">GPS-Tracking mit Live-Karte, Pace &amp; Kalorien</p></div></div>
+    <div class="sport coming reveal d3"><img src="assets/img/hyroxcover.webp" alt="Hyrox" loading="lazy" width="640" height="1138"><div class="shade"></div><div class="ai-badge" data-de="KI-generiert" data-en="AI-generated">KI-generiert</div><div class="soon" data-de="Coming Soon" data-en="Coming Soon">Coming Soon</div><div class="label"><h3>Hyrox</h3><p data-de="Race-Vorbereitung für die am schnellsten wachsende Fitness-Competition" data-en="Race prep for the fastest-growing fitness competition">Race-Vorbereitung für die am schnellsten wachsende Fitness-Competition</p></div></div>
   </div>
 </section>
 
@@ -544,6 +577,9 @@ footer{border-top:1px solid var(--border);padding:60px clamp(16px,5vw,72px) 40px
   <div class="faq">
     <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><span data-de="Was ist Pryvo?" data-en="What is Pryvo?">Was ist Pryvo?</span><span class="pm">+</span></button><div class="faq-a"><p data-de="Pryvo ist eine KI-gestützte Fitness- und Ernährungs-App, die dir hilft, smarter zu trainieren, besser zu essen und konsequent zu bleiben. Personalisierte Trainingspläne, Kalorien-Tracking, Progress-Insights und Community — in einem verbundenen System." data-en="Pryvo is an AI-powered fitness and nutrition app that helps you train smarter, eat better and stay consistent. Personalized training plans, calorie tracking, progress insights and community — in one connected system.">Pryvo ist eine KI-gestützte Fitness- und Ernährungs-App, die dir hilft, smarter zu trainieren, besser zu essen und konsequent zu bleiben. Personalisierte Trainingspläne, Kalorien-Tracking, Progress-Insights und Community — in einem verbundenen System.</p></div></div>
     <div class="faq-item reveal d1"><button class="faq-q" onclick="toggleFaq(this)"><span data-de="Was macht Pryvo besser als andere Fitness-Apps?" data-en="What makes Pryvo better than other fitness apps?">Was macht Pryvo besser als andere Fitness-Apps?</span><span class="pm">+</span></button><div class="faq-a"><p data-de="Andere Apps machen eine Sache: Tracking ODER Training ODER Community. Pryvo verbindet alles — und die KI nutzt deine Daten aus allen Bereichen, um dich wirklich individuell zu coachen." data-en="Other apps do one thing: tracking OR training OR community. Pryvo connects everything — and the AI uses your data from all areas to coach you truly individually.">Andere Apps machen eine Sache: Tracking ODER Training ODER Community. Pryvo verbindet alles — und die KI nutzt deine Daten aus allen Bereichen, um dich wirklich individuell zu coachen.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><span data-de="Kann ich mit Pryvo Kalorien zählen und Makros tracken?" data-en="Can I count calories and track macros with Pryvo?">Kann ich mit Pryvo Kalorien zählen und Makros tracken?</span><span class="pm">+</span></button><div class="faq-a"><p data-de="Ja. Fotografiere deine Mahlzeit und die KI erkennt Gericht, Portion, Kalorien und Makros. Alternativ trackst du per Barcode-Scanner, Spracheingabe oder manuell." data-en="Yes. Snap a photo of your meal and the AI recognizes dish, portion, calories and macros. Or track via barcode scanner, voice input or manually.">Ja. Fotografiere deine Mahlzeit und die KI erkennt Gericht, Portion, Kalorien und Makros. Alternativ trackst du per Barcode-Scanner, Spracheingabe oder manuell.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><span data-de="Hilft Pryvo beim Abnehmen und Muskelaufbau?" data-en="Does Pryvo help with weight loss and muscle gain?">Hilft Pryvo beim Abnehmen und Muskelaufbau?</span><span class="pm">+</span></button><div class="faq-a"><p data-de="Pryvo erstellt personalisierte Trainingspläne und passt Ernährung und Training an dein Ziel an – ob Abnehmen, Muskelaufbau oder Ausdauer." data-en="Pryvo creates personalized training plans and adapts nutrition and training to your goal – weight loss, muscle gain or endurance.">Pryvo erstellt personalisierte Trainingspläne und passt Ernährung und Training an dein Ziel an – ob Abnehmen, Muskelaufbau oder Ausdauer.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><span data-de="Welche Sportarten unterstützt Pryvo?" data-en="Which sports does Pryvo support?">Welche Sportarten unterstützt Pryvo?</span><span class="pm">+</span></button><div class="faq-a"><p data-de="Gym/Krafttraining, Calisthenics und Running mit GPS-Tracking. Hyrox folgt in Kürze." data-en="Gym/strength training, calisthenics and running with GPS tracking. Hyrox is coming soon.">Gym/Krafttraining, Calisthenics und Running mit GPS-Tracking. Hyrox folgt in Kürze.</p></div></div>
     <div class="faq-item reveal d2"><button class="faq-q" onclick="toggleFaq(this)"><span data-de="Ist Pryvo kostenlos?" data-en="Is Pryvo free?">Ist Pryvo kostenlos?</span><span class="pm">+</span></button><div class="faq-a"><p data-de="Ja, du kannst kostenlos starten — inklusive KI-Foto-Scans und KI-Aktionen mit fairen Limits. Wer mehr will, bekommt mit Premium unbegrenzten Zugriff." data-en="Yes, you can start for free — including AI photo scans and AI actions with fair limits. If you want more, Premium gives you unlimited access.">Ja, du kannst kostenlos starten — inklusive KI-Foto-Scans und KI-Aktionen mit fairen Limits. Wer mehr will, bekommt mit Premium unbegrenzten Zugriff.</p></div></div>
     <div class="faq-item reveal d3"><button class="faq-q" onclick="toggleFaq(this)"><span data-de="Für wen ist Pryvo geeignet?" data-en="Who is Pryvo for?">Für wen ist Pryvo geeignet?</span><span class="pm">+</span></button><div class="faq-a"><p data-de="Für alle — vom Anfänger bis zum ambitionierten Athleten. Ob Gym, Calisthenics oder Running: Die Pläne passen sich deinem Level an, nicht umgekehrt." data-en="For everyone — from beginners to ambitious athletes. Whether gym, calisthenics or running: the plans adapt to your level, not the other way around.">Für alle — vom Anfänger bis zum ambitionierten Athleten. Ob Gym, Calisthenics oder Running: Die Pläne passen sich deinem Level an, nicht umgekehrt.</p></div></div>
     <div class="faq-item reveal d3"><button class="faq-q" onclick="toggleFaq(this)"><span data-de="Sind meine Daten sicher?" data-en="Is my data safe?">Sind meine Daten sicher?</span><span class="pm">+</span></button><div class="faq-a"><p data-de="Ja. Pryvo ist DSGVO-konform, deine Daten werden auf Servern in Europa verarbeitet und niemals an Dritte verkauft." data-en="Yes. Pryvo is GDPR compliant, your data is processed on servers in Europe and never sold to third parties.">Ja. Pryvo ist DSGVO-konform, deine Daten werden auf Servern in Europa verarbeitet und niemals an Dritte verkauft.</p></div></div>
