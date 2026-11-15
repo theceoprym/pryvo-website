@@ -6,7 +6,7 @@
 <title>PRYVO – Kalorien zählen, Training &amp; KI-Coach | App für iPhone</title>
 <meta name="description" content="PRYVO bringt Ernährung und Training in eine App: Essen per Foto, Barcode oder Chat erfassen, in Gym, Calisthenics und Running trainieren und deinen Fortschritt sehen. Jetzt kostenlos im App Store.">
 <meta name="author" content="MAFEKA UG (haftungsbeschränkt)">
-<meta name="theme-color" content="#0e0f0f">
+<meta name="theme-color" content="#0a281b">
 <meta name="apple-itunes-app" content="app-id=6797687805">
 <link rel="canonical" href="https://pryvo.de/">
 <link rel="alternate" hreflang="de" href="https://pryvo.de/">
@@ -14,6 +14,8 @@
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/space-grotesk-latin-700-normal.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-latin-400-normal.woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/app/ernaehrung.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/hero/pryvo-sky-1672.webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/hero/pryvo-sky-1000.webp" media="(max-width: 860px)" fetchpriority="high">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PRYVO">
 <meta property="og:url" content="https://pryvo.de/">
@@ -359,6 +361,8 @@ footer a:hover{color:var(--ink)}
   .badge strong{font-size:21px}
 }
 </style>
+<link rel="stylesheet" href="assets/css/sky-hero.css?v=20261115-1">
+<script src="assets/js/sky-carousel.js?v=20261115-1" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-en="Skip to content">Zum Inhalt springen</a>
@@ -385,33 +389,53 @@ footer a:hover{color:var(--ink)}
 <main id="main">
 
 <!-- HERO -->
-<section class="hero">
-  <div class="wrap grid">
-    <div class="hero-txt">
-      <p class="kicker rv"><i aria-hidden="true"></i><span data-en="Now available for iPhone">Jetzt für iPhone verfügbar</span></p>
-      <h1 class="rv d1" data-en="<span>Your training.</span><span>Your nutrition.</span><span>Your progress.</span>"><span>Dein Training.</span><span>Deine Ernährung.</span><span>Dein Fortschritt.</span></h1>
-      <p class="lead rv d2" data-en="Log your meals, plan your training and keep your goals in view. PRYVO brings it all together in one app.">Erfasse deine Mahlzeiten, plane dein Training und behalte deine Ziele im Blick. Mit PRYVO kommt alles in einer App zusammen.</p>
-      <div class="store rv d2">
+<section class="hero" aria-labelledby="hero-title">
+  <picture class="sky-backdrop" aria-hidden="true">
+    <source media="(max-width: 860px)" srcset="assets/img/hero/pryvo-sky-1000.webp">
+    <img src="assets/img/hero/pryvo-sky-1672.webp" width="1672" height="941" alt="" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="wrap hero-layout">
+    <div class="hero-copy">
+      <p class="kicker"><i aria-hidden="true"></i><span data-en="Now available for iPhone">Jetzt für iPhone verfügbar</span></p>
+      <h1 id="hero-title" data-en="<span>Your training.</span><span>Your nutrition.</span><span>Your progress.</span>"><span>Dein Training.</span><span>Deine Ernährung.</span><span>Dein Fortschritt.</span></h1>
+      <p class="lead" data-en="Log your meals, plan your training and keep your goals in view. PRYVO brings it all together in one app.">Erfasse deine Mahlzeiten, plane dein Training und behalte deine Ziele im Blick. Mit PRYVO kommt alles in einer App zusammen.</p>
+      <div class="store">
         <a class="badge" href="https://apps.apple.com/de/app/pryvo/id6797687805" target="_blank" rel="noopener" aria-label="PRYVO im App Store laden" data-en-aria="Download PRYVO on the App Store">
           <svg viewBox="0 0 24 28" aria-hidden="true"><path d="M17.56 14.86c-.03-2.86 2.34-4.24 2.44-4.31-1.33-1.95-3.4-2.21-4.14-2.24-1.76-.18-3.44 1.04-4.33 1.04-.9 0-2.27-1.01-3.73-.99-1.92.03-3.69 1.12-4.68 2.84-2 3.46-.51 8.58 1.43 11.39.95 1.37 2.08 2.92 3.56 2.86 1.43-.06 1.97-.92 3.7-.92 1.72 0 2.21.92 3.72.89 1.54-.03 2.51-1.4 3.45-2.78 1.09-1.59 1.54-3.13 1.56-3.21-.03-.01-2.99-1.15-3.02-4.56zM14.72 6.46c.79-.96 1.32-2.28 1.17-3.6-1.13.05-2.5.75-3.31 1.7-.73.84-1.37 2.19-1.2 3.48 1.26.1 2.55-.64 3.34-1.58z"/></svg>
           <span><small data-en="Download on the">Laden im</small><strong>App Store</strong></span>
         </a>
         <p class="android"><i aria-hidden="true"></i>Google Play · Coming soon</p>
       </div>
-      <div class="facts rv d2">
+      <div class="facts">
         <div><b data-en="Free to download">Kostenlos laden</b><span data-en="Premium optional">Premium optional</span></div>
         <div><b>Gym, Calisthenics, Running</b><span data-en="in one app">in einer App</span></div>
         <div><b>iPhone</b><span data-en="iOS 15.1 or later">ab iOS 15.1</span></div>
       </div>
     </div>
-    <div class="hero-media rv d1">
-      <div class="phone"><img src="assets/img/app/ernaehrung.webp" width="600" height="1217" alt="PRYVO-Screen Ernährung: Kalorien heute mit gegessen, verbrannt und übrig, darüber die Eingabe per Barcode, Foto, Chat und Manuell" data-en-alt="PRYVO nutrition screen: today's calories eaten, burned and remaining, with barcode, photo, chat and manual input" fetchpriority="high"></div>
-      <div class="detail"><img src="assets/img/app/detail-chart.webp" width="560" height="308" alt="Ausschnitt aus dem Fortschritt-Screen: Gewichtsverlauf über drei Monate" data-en-alt="Detail of the progress screen: weight curve over three months" loading="lazy"></div>
-      <p class="cap" data-en="<strong>Real app screens.</strong> Nutrition today and weight over three months.">
-        <strong>Echte App-Screens.</strong> Ernährung heute und Gewicht über drei Monate.</p>
+    <div class="sky-carousel" data-sky-carousel role="region" aria-roledescription="Karussell" aria-label="Einblicke in die PRYVO-App" data-en-aria="Inside the PRYVO app">
+      <div class="sky-stage" role="group" aria-label="App-Screens: wischen oder mit den Pfeilen wechseln" data-en-aria="App screens: swipe or use the arrow buttons">
+        <button class="sky-screen" type="button" data-screen="0" data-name-de="Ernährung" data-name-en="Nutrition" aria-pressed="true" aria-label="Ernährung anzeigen">
+          <img src="assets/img/app/ernaehrung.webp" width="600" height="1217" alt="PRYVO: Ernährung mit Kalorien, Makros und Mahlzeitenerfassung" data-en-alt="PRYVO: nutrition with calories, macros and meal logging" fetchpriority="high" decoding="async" draggable="false">
+        </button>
+        <button class="sky-screen" type="button" data-screen="1" data-name-de="Gym" data-name-en="Gym" aria-pressed="false" aria-label="Gym anzeigen">
+          <img src="assets/img/app/gym.webp" width="600" height="1232" alt="PRYVO: Gym mit Workouts, Plänen und KI-Coach" data-en-alt="PRYVO: gym workouts, plans and AI coach" loading="eager" decoding="async" draggable="false">
+        </button>
+        <button class="sky-screen" type="button" data-screen="2" data-name-de="Running" data-name-en="Running" aria-pressed="false" aria-label="Running anzeigen">
+          <img src="assets/img/app/running.webp" width="600" height="1249" alt="PRYVO: Running mit freiem Lauf, Intervallen und Trainingsplan" data-en-alt="PRYVO: running with free runs, intervals and a training plan" loading="eager" decoding="async" draggable="false">
+        </button>
+      </div>
+      <div class="sky-controls">
+        <button class="sky-control" type="button" data-step="-1" aria-label="Vorheriger App-Screen"><span aria-hidden="true">←</span></button>
+        <p class="sky-caption"><span data-screen-name>Ernährung</span><span class="sky-count" data-screen-count>01 / 03</span></p>
+        <button class="sky-control" type="button" data-step="1" aria-label="Nächster App-Screen"><span aria-hidden="true">→</span></button>
+        <button class="sky-control" type="button" data-action="pause" aria-label="Automatischen Bildwechsel pausieren" aria-pressed="false">Ⅱ</button>
+      </div>
+      <p class="sky-note" data-en="Real PRYVO app screens. Swipe to explore.">Echte PRYVO-App-Screens. Wische durch die App.</p>
+      <span class="sky-sr-only" data-carousel-status role="status" aria-live="polite" aria-atomic="true"></span>
     </div>
   </div>
 </section>
+
 
 <!-- 01 ERNÄHRUNG -->
 <section class="chapter c1" id="ernaehrung" aria-labelledby="h-c1">
@@ -666,6 +690,7 @@ footer a:hover{color:var(--ink)}
     A.forEach(function(e){e.setAttribute('aria-label',en?e.dataset.enAria:e.dataset.deAria)});
     I.forEach(function(e){e.setAttribute('alt',en?e.dataset.enAlt:e.dataset.deAlt)});
     document.documentElement.lang=l;document.title=meta[l].t;
+    document.dispatchEvent(new CustomEvent("pryvo:languagechange",{detail:{language:l}}));
     document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===l?'true':'false')});
     try{localStorage.setItem('pryvo-lang',l)}catch(e){}
   }
