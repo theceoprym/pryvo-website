@@ -1,0 +1,8 @@
+/* Native links keep both language versions usable without JavaScript. */
+.lang a{display:inline-flex;align-items:center;justify-content:center;background:none;border:0;color:var(--ink3);font:500 12px/1 var(--text);letter-spacing:.06em;padding:8px 9px;min-width:36px;min-height:32px;text-decoration:none}
+.lang a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+.lang a:hover{color:var(--ink)}
+.lang a[aria-current="page"]:hover{color:var(--bg)}
+.top .nav .lang a{font-size:12px;padding:8px 9px;border-bottom:0;color:var(--ink3)}
+.top .nav .lang a::after{display:none}
+.top .nav .lang a[aria-current="page"]{color:var(--bg)}

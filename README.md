@@ -14,3 +14,11 @@ Statische Website für [pryvo.de](https://pryvo.de), deployed als Cloudflare Wor
 Jeder Push auf `main` wird automatisch von Cloudflare gebaut und live auf pryvo.de deployed. Kein manueller Upload mehr nötig.
 
 Änderungen lokal machen → committen → pushen. Fertig.
+
+## Sprachversionen und SEO
+
+- `/index.html` ist die deutsche Startseite, `/en/index.html` die vollständige englische Version. Beide enthalten die Texte bereits im HTML, auch ohne JavaScript.
+- Sprachwechsel erfolgen über normale Links. Bei inhaltlichen Änderungen beide HTML-Dateien sowie die jeweiligen Metadaten und strukturierten Daten aktualisieren.
+- Gemeinsame Bilder, Schriftarten und Skripte werden über absolute `/assets/`-Pfade eingebunden.
+- Rechtliche Seiten werden von Cloudflare unter URLs ohne `.html` ausgeliefert. Canonical-Tags und `sitemap.xml` verwenden diese Zieladressen.
+- Die App selbst ist aktuell deutschsprachig; die englische Website weist darauf hin.
