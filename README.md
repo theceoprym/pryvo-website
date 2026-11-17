@@ -7,7 +7,7 @@ Statische Website für [pryvo.de](https://pryvo.de), deployed als Cloudflare Wor
 - `index.html` — Startseite
 - `impressum.html`, `datenschutz.html` — Rechtliches
 - `assets/img`, `assets/video`, `assets/fonts` — Bilder, Videos, selbst gehostete Fonts
-- `wrangler.jsonc` — Cloudflare-Konfiguration (reine Static-Assets, kein Build-Schritt nötig)
+- `wrangler.jsonc` — Cloudflare-Konfiguration (statische Seiten mit Weiterleitungs-Middleware, kein Build-Schritt nötig)
 
 ## Deploy
 
@@ -22,3 +22,9 @@ Jeder Push auf `main` wird automatisch von Cloudflare gebaut und live auf pryvo.
 - Gemeinsame Bilder, Schriftarten und Skripte werden über absolute `/assets/`-Pfade eingebunden.
 - Rechtliche Seiten werden von Cloudflare unter URLs ohne `.html` ausgeliefert. Canonical-Tags und `sitemap.xml` verwenden diese Zieladressen.
 - Die App selbst ist aktuell deutschsprachig; die englische Website weist darauf hin.
+
+## Einheitliche Domain und HTTPS
+
+`worker.mjs` leitet HTTP und die www-Variante mit Status 301 auf `https://pryvo.de` um. Pfad und Suchparameter bleiben erhalten. Die Domain-Zuordnung steht in `wrangler.jsonc`; www ersetzt den alten Framer-Verweis. HTML-Antworten erhalten einen expliziten UTF-8-Header. Die eigentlichen Seiten werden weiterhin direkt aus dem statischen `ASSETS`-Binding ausgeliefert.
+
+`.assetsignore` verhindert, dass Worker-Code und Projektkonfiguration als öffentliche Seitendateien ausgeliefert werden.

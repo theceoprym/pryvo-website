@@ -2,7 +2,14 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "muddy-bird-e29f",
   "compatibility_date": "2026-08-17",
+  "main": "worker.mjs",
+  "routes": [
+    { "pattern": "pryvo.de", "custom_domain": true },
+    { "pattern": "www.pryvo.de", "custom_domain": true }
+  ],
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": true
   }
 }

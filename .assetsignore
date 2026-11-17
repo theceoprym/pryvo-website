@@ -1,0 +1,9 @@
+/worker.mjs
+/wrangler.jsonc
+/README.md
+/.wrangler
+/.git
+/node_modules
+**/.DS_Store
+.dev.vars*
+.env*
