@@ -25,6 +25,8 @@ Jeder Push auf `main` wird automatisch von Cloudflare gebaut und live auf pryvo.
 
 ## Einheitliche Domain und HTTPS
 
-`worker.mjs` leitet HTTP und die www-Variante mit Status 301 auf `https://pryvo.de` um. Pfad und Suchparameter bleiben erhalten. Die Domain-Zuordnung steht in `wrangler.jsonc`; www ersetzt den alten Framer-Verweis. HTML-Antworten erhalten einen expliziten UTF-8-Header. Die eigentlichen Seiten werden weiterhin direkt aus dem statischen `ASSETS`-Binding ausgeliefert.
+`worker.mjs` leitet HTTP und die www-Variante mit Status 301 auf `https://pryvo.de` um. Pfad und Suchparameter bleiben erhalten. HTML-Antworten erhalten einen expliziten UTF-8-Header. Die eigentlichen Seiten werden weiterhin direkt aus dem statischen `ASSETS`-Binding ausgeliefert.
+
+Die Domain-Zuordnung wird separat in Cloudflare verwaltet: `pryvo.de` als Custom Domain und `www.pryvo.de/*` als Worker-Route vor dem bisherigen Framer-Ziel. Keine `routes`-Liste in `wrangler.jsonc` ergänzen: Der automatische Build soll diese bestehenden Zuordnungen erhalten, statt mit seinen eingeschränkten Rechten DNS-Einträge neu einzurichten.
 
 `.assetsignore` verhindert, dass Worker-Code und Projektkonfiguration als öffentliche Seitendateien ausgeliefert werden.
