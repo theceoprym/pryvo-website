@@ -21,7 +21,11 @@ Jeder Push auf `main` wird automatisch von Cloudflare gebaut und live auf pryvo.
 - Sprachwechsel erfolgen über normale Links. Bei inhaltlichen Änderungen beide HTML-Dateien sowie die jeweiligen Metadaten und strukturierten Daten aktualisieren.
 - Gemeinsame Bilder, Schriftarten und Skripte werden über absolute `/assets/`-Pfade eingebunden.
 - Rechtliche Seiten werden von Cloudflare unter URLs ohne `.html` ausgeliefert. Canonical-Tags und `sitemap.xml` verwenden diese Zieladressen.
-- Die App selbst ist aktuell deutschsprachig; die englische Website weist darauf hin.
+- Die App ist auf Deutsch und Englisch verfügbar.
+
+## KI-Limits
+
+Stand 18.11.2026, abgeglichen mit dem öffentlichen App-Store-Eintrag (App-ID 6797687805): kostenlos drei Fotos pro Monat und drei Chat-Einträge pro Tag; Premium bis zu 300 Mahlzeiten pro Monat per Foto erkennen. Bei Änderungen Preisübersicht, FAQ und FAQ-JSON-LD in beiden Sprachversionen gemeinsam anpassen.
 
 ## Einheitliche Domain und HTTPS
 
